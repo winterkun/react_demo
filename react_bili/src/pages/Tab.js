@@ -85,7 +85,7 @@ export default class Tab extends Component {
                         data-seed="logId"
                     >
                         <Cookbook></Cookbook>
-                        {this.renderContent('Food')}
+                        {/* {this.renderContent('Food')} */}
                     </TabBar.Item>
                     <TabBar.Item
                         icon={
@@ -115,7 +115,7 @@ export default class Tab extends Component {
                         }}
                         data-seed="logId1"
                     >
-                        {this.renderContent('Kind')}
+                        {/* {this.renderContent('Kind')} */}
                     </TabBar.Item>
                     <TabBar.Item
                         icon={
@@ -144,7 +144,7 @@ export default class Tab extends Component {
                             });
                         }}
                     >
-                        {this.renderContent('Food_map')}
+                        {/* {this.renderContent('Food_map')} */}
                     </TabBar.Item>
                     <TabBar.Item
                         icon={{ uri: `${more}` }}
@@ -158,7 +158,7 @@ export default class Tab extends Component {
                             });
                         }}
                     >
-                        {this.renderContent('more')}
+                        {/* {this.renderContent('more')} */}
                     </TabBar.Item>
                 </TabBar>
             </div>

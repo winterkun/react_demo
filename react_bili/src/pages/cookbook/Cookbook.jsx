@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Header from './Header'
 import Swiper from './swiper'
-import Search from '@/search'
+import Hotcate from './Hotcate'
+import Search from '@/search/search'
+
 export default class Cookbook extends Component {
     render() {
         return (
@@ -9,6 +11,7 @@ export default class Cookbook extends Component {
                 <Header></Header>
                 <Swiper></Swiper>
                 <Search></Search>
+                <Hotcate></Hotcate>
             </div>
         );
     }

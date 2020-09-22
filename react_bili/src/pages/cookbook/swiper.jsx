@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { Carousel } from 'antd-mobile'
-import zhaxie from 'assets/zhaxie.jpg'
-import fruit from 'assets/fruit.jpg'
-import jiroujuan from 'assets/jiroujuan.jpg'
+import zhaxie from 'assets/swiper_img/zhaxie.jpg'
+import fruit from 'assets/swiper_img/fruit.jpg'
+import jiroujuan from 'assets/swiper_img/jiroujuan.jpg'
 import { SwiperWrap } from './styledcookbook.js'
-export default class Swiper extends Component {
+import { connect } from "react-redux"
+const mapState = state => {
+    list = state.list
+}
+class Swiper extends Component {
     render() {
         return (
             <div>
@@ -15,13 +19,13 @@ export default class Swiper extends Component {
                         beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
                         afterChange={index => console.log('slide to', index)}
                     >
-                        <img src={zhaxie} alt="" />
-                        <img src={jiroujuan} alt="" />
-                        <img src={fruit} alt="" />
-                        <img src={zhaxie} alt="" />
+                        {this.props.list.slice(0, 5).map((val) => {
+                            <img src={val.img} key={val.id} alt="" />
+                        })}
                     </Carousel>
                 </SwiperWrap>
             </div>
         );
     }
 }
+export default connect(mapState)(Swiper)

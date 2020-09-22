@@ -17,3 +17,24 @@ export const SwiperWrap = styled.div`
     padding:0;
     font-size:0;
 `
+
+export const HotcateWrap = styled.div`
+    .header{
+        line-height: 2.5rem;
+        background: #fff;
+        padding-left: 2rem;
+        border-bottom:1px solid gray;
+    }
+    .item{
+      display:flex;
+      flex-direction:column;
+      text-align:center;
+      align-items:center;
+      img{
+          width:70%
+      }
+      span{
+          margin-top:.05px
+      }
+    }
+`
